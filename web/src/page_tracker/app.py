@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 
 @app.get("/")
-def index():
+def index():  # Index page
     try:
         page_views = redis().incr("page_views")
     except RedisError:
